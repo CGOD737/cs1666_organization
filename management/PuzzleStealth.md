@@ -58,11 +58,11 @@
 8. 10/21 - 10/27
 	* Manager: Chris Godfrey
 	* Goals:
-		1. GOAL1
-		1. GOAL2
-		1. GOAL3
-		...
-9. 10/28 - 11/3
+		1. Have distinguishable rooms and basic objectives.
+        	2. Implement Basic Combat, Environment, and AI player Interactions.
+        	3. Have interactions between Hacker Screen and Spy Screen.
+        	4. Add cameras and adjust AI enemy pathfinding if the spy is within a radius of the camera.
+        	5. Have initial interactable puzzles spawn in the level via the tile class.
 	* Manager: Patrick Rhee
 	* Goals:
 		1. GOAL1
