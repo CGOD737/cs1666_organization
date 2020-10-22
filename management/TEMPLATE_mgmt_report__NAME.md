@@ -1,4 +1,4 @@
-# Magagment week end progress report template
+# Magagment week end report
 
 Manager Name: 
 
@@ -6,22 +6,14 @@ Week (dates):
 
 ## Specific goals:
 
-1. Goal1
-	* Commits:
+1. Goal 1
+	* Commits: 
 	* Status:
-
-2. Goal2
+2. Goal2 
 	* Commits:
 	* Status:
 
 ## Team member evalution
 
-* Name:
-	* Commits:
-	* Effort rating (-2, -1, 0, 1, or 2):
-	* Overall description:
-
-* Name:
-	* Commits:
-	* Effort rating (-2, -1, 0, 1, or 2):
-	* Overall description:
+* Name: description of progress
+* Name: description of progress
