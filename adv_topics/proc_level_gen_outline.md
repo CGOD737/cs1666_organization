@@ -118,6 +118,50 @@ SDL_Surface/Rect Usage
 		* Turn around if too steep
 
 
-## Presentation IV (Nov. 16):
-* 
+## Presentation IV (Nov. 16)
 
+	*Uses of Procedural Generation
+		*Generating  Simulations
+			*Simulating Weather
+				*Outside of gaming Weather Forecast.
+				*Inside gaming, creates realistic environments
+			*Simulating Destruction
+				*Destruction events have a degree of randomness.
+				*Gives more realistic look to destruction.
+				*Examples: Battlefield, Red Faction implement it the best
+
+			*Simulating Events
+				*Dynamic Worlds Require a degree of randomness.
+				*Events can be generated so the world doesn't feel empty.
+				*RPGs use this a lot.
+				*Skyrim is a great example.
+
+		*Artificial Intelligence 
+			*On a level, a lot of AI is dependent on procedurally generated actions.
+			*Can cause AI to act in somewhat of unique manner but still be predictable enough.
+			*For instance you won't see an enemy soldier in a game such as Call of Duty dancing randomly.
+
+
+	*Our implementation Overview
+		* A seed is used 
+		* In a way is pretty much perlin noise.
+		* Instead of Terrain, each black dot is a room.
+		* Enemies and objectives are then placed accordingly.
+	*Implementation Details
+		* Rooms
+			* Whole thing is dependent on seed.
+			* The game sets a random tile to a room.
+			* The game has a set number of tiles for a room.
+			* The game searches around the selected tile and chooses a random valid.
+			* The game checks if that tile is valid.
+			* The game keeps surrounding the intial tile.
+			* A randomly shaped room is the result.
+		* Doors
+			* Upon creation of Room chooses a random wall tile.
+			* It checks if the wall tile is valid for a door.
+			* Program than inserts the door tile.
+		* Enemies/Objectives
+			* Game checks if the tile is just a regular floor tile.
+			* If the tile is a regular floor tile, then the enemy is spawned in
+			* The enemy goes on to adjust pathfinding through AI implementations.
+			* Objectives are static so the floor tile will now be designated as that objective.
