@@ -118,6 +118,64 @@ SDL_Surface/Rect Usage
 		* Turn around if too steep
 
 
-## Presentation IV (Nov. 16):
-* 
+## Presentation IV (Nov. 16)
 
+	* Our implementation Overview
+		* A seed is used 
+		* In a way is pretty much perlin noise.
+			* Won't go into too much detail because this was already covered
+			* But a brief reminder that perline noise is just applying a random noise field to the level gen
+			* Instead of Terrain, each black dot is a room.
+		* Enemies and objectives are then placed accordingly.
+	
+	* Implementation Details
+		* Rooms
+			* Whole thing is dependent on seed.
+			* The game sets a random tile to a room.
+			* The game has a set number of tiles for a room.
+			* The game searches around the selected tile and chooses a random valid.
+			* The game checks if that tile is valid.
+			* The game keeps surrounding the intial tile.
+			* A randomly shaped room is the result.
+		* Doors
+			* Upon creation of Room chooses a random wall tile.
+			* It checks if the wall tile is valid for a door.
+			* Program than inserts the door tile.
+		* Enemies/Objectives
+			* Game checks if the tile is just a regular floor tile.
+			* If the tile is a regular floor tile, then the enemy is spawned in
+			* The enemy goes on to adjust pathfinding through AI implementations.
+			* Objectives are static so the floor tile will now be designated as that objective.
+	
+	* Issues
+		* How to detect where walls should be placed
+			* Done at the very end of room creation 
+			* Algorithm to check whether the wall next to it is placed.
+		* Differentiating between rooms during creation.
+			* Done by checking for previously allocated wall tiles.
+			* If a wall tile was placed then start room creation somewhere else.
+		* How to actually place objectives
+			* Similar to Enemies, we look for a valid tile Type
+			* We scan the whole map and randomly choose where to place them.
+		* How to link objectives
+			* Set objectives to pointers and tile types
+			* For instance, keypad points to a door and opens the door when finished.
+		* Making Rooms trend towards a square shape
+			* The Algorithm places the tiles surrounding it.
+			* That way it trends towards a square shape but has some randomness
+	
+	* Things we would have liked to implement
+		* Dynamic Lighting/Shadows
+			* Would have added a lot of extra time to development
+			* Mainly would have been really hard to figure out with SDL
+		* Room Types
+			* Each room has a specific objective associated
+			* Similar to amongus.
+			* Each room would also have their own set of tiles accordingly
+		* Level Animations
+			* Moving Camera
+			* Door Movement more natural.
+			
+		
+		
+		
