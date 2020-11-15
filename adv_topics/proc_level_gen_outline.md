@@ -165,6 +165,10 @@ SDL_Surface/Rect Usage
 		* Making Rooms trend towards a square shape
 			* The Algorithm places the tiles surrounding it.
 			* That way it trends towards a square shape but has some randomness
+			
+	* Previous Ideas
+		* Generate 2-D array and base level on that
+		* Binding of Issac style room layout.
 	
 	* Things we would have liked to implement
 		* Dynamic Lighting/Shadows
