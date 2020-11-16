@@ -124,11 +124,12 @@ SDL_Surface/Rect Usage
 
 	* Our implementation Overview
 		* A seed is used 
-		* In a way is pretty much perlin noise.
-			* Won't go into too much detail because this was already covered
-			* But a brief reminder that perline noise is just applying a random noise field to the level gen
-			* Instead of Terrain, each black dot is a room.
-		* Enemies and objectives are then placed accordingly.
+		* Displaying the Level
+	
+	* Previous Ideas
+		* Binding of Isaac Style
+		* Multi-Layered Rectanges
+		* Blooming: The Drunkard Walk Algorithn
 	
 	* Implementation Details
 		* Rooms
@@ -166,10 +167,6 @@ SDL_Surface/Rect Usage
 			* The Algorithm places the tiles surrounding it.
 			* That way it trends towards a square shape but has some randomness
 			
-	* Previous Ideas
-		* Generate 2-D array and base level on that
-		* Binding of Issac style room layout.
-	
 	* Things we would have liked to implement
 		* Dynamic Lighting/Shadows
 			* Would have added a lot of extra time to development
@@ -178,8 +175,8 @@ SDL_Surface/Rect Usage
 			* Each room has a specific objective associated
 			* Similar to amongus.
 			* Each room would also have their own set of tiles accordingly
-		* Level Animations
-			* Moving Camera
-			* Door Movement more natural.
+		* Sub Levels
+			* Skyscraper style layout
+			* Each Level is a separate floor
 
 
